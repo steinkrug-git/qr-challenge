@@ -1,5 +1,17 @@
+
+:root{
+    --clr-white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+
+    --ff-sans: 'Outfit', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
 body {
-    background: rgb(131, 184, 233);
+    background: var(--slate-300);
 }
 
 .attribution {
@@ -12,7 +24,7 @@ body {
 }
 
 .container{
-    background: white;
+    background:var(--clr-white);
     width: 38vh;
     height: 60vh ;
     border-radius: 25px;
@@ -56,3 +68,19 @@ body {
 
 }
 
+.text h1 {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    color: var(--slate-900);
+    margin-top: 2px
+}
+
+.text p {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    font-size: 0.98rem;
+    color: var(--slate-500);
+    margin-top: 2px;
+    padding: 0 15px;
+}
