@@ -1,5 +1,5 @@
 
-:root{
+:root {
     --clr-white: hsl(0, 0%, 100%);
     --slate-300: hsl(212, 45%, 89%);
     --slate-500: hsl(216, 15%, 48%);
@@ -12,75 +12,74 @@
 
 body {
     background: var(--slate-300);
+    font-family: var(--ff-sans);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: var(--clr-white);
+    width: 90%; 
+    max-width: 300px; 
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.qr img {
+    width: 100%; 
+    border-radius: 10px;
+    height: auto; 
+}
+
+.text{
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.1rem;
+    max-width: 350px; 
+}
+
+.text h1 {
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    color: var(--slate-900);
+    max-width: 350px;
+}
+
+.text p {
+    font-weight: var(--fw-normal);
+    font-size: 1rem;
+    color: var(--slate-500);
+    margin: 0;
+    line-height: 1.5;
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.8rem;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
 
-.container{
-    background:var(--clr-white);
-    width: 38vh;
-    height: 60vh ;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-self: center;
-    margin: 15vw auto;
-}
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
 
-.qr{
-    margin: 3px;
-    padding: 5px;
-    align-self: center;
-}
+    .text h1 {
+        font-size: 1.2rem; 
+    }
 
-.qr img {
-    width: 95%;
-    height: 95%;
-    padding: 2.5%;
-    border-radius: 20px;
-}
-
-.container h1{
-    text-align: center;
-    font-size: 1.3rem;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.container p{
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.text{
-    padding: 5px;
-
-}
-
-.text h1 {
-    font-family: var(--ff-sans);
-    font-weight: var(--fw-bold);
-    font-size: 1.5rem;
-    color: var(--slate-900);
-    margin-top: 2px
-}
-
-.text p {
-    font-family: var(--ff-sans);
-    font-weight: var(--fw-normal);
-    font-size: 0.98rem;
-    color: var(--slate-500);
-    margin-top: 2px;
-    padding: 0 15px;
+    .text p {
+        font-size: 0.9rem;
+    }
 }
